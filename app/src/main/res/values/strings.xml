@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="label_height_metric">Height (cm)</string>
+    <string name="label_weight_metric">Weight (kg)</string>
+    <string name="label_height_imperial">Height</string>
+    <string name="label_feet">Feet</string>
+    <string name="label_inches">Inches</string>
+    <string name="label_weight_imperial">Weight (pounds)</string>
+    <string name="calculate_bmi">Calculate BMI</string>
+    <string name="your_bmi_is">Your BMI is %.1f</string>
+    <string name="bmi_underweight">Underweight</string>
+    <string name="bmi_normal_weight">Normal weight</string>
+    <string name="bmi_overweight">Overweight</string>
+    <string name="bmi_obesity">Obesity</string>
+    <string name="tab_title_metric">Metric</string>
+    <string name="tab_title_imperial">Imperial</string>
+    <string name="title_activity_main">@string/app_name</string>
+    <string name="toast_invalid_number">Invalid number!</string>
+</resources>

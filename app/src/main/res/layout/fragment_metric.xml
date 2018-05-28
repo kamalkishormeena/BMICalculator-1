@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="body" type="com.example.kamal.bmicalculator.model.BodyJava" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/TextLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+            <TextView
+                style="@style/LabelText"
+                android:text="@string/label_height_metric"
+                android:labelFor="@+id/et_height"
+                />
+            <EditText
+                style="@style/EditText"
+                android:id="@+id/et_height"
+                android:inputType="numberDecimal"
+                android:text="@={body.heightText}"
+                />
+
+            <TextView
+                style="@style/LabelText"
+                android:text="@string/label_weight_metric"
+                android:labelFor="@+id/et_weight"
+                />
+            <EditText
+                style="@style/EditText"
+                android:id="@+id/et_weight"
+                android:inputType="numberDecimal"
+                android:text="@={body.weightText}"
+                android:imeOptions="actionDone"
+                />
+
+            <Button
+                style="@style/Button"
+                android:background="@color/btn"
+                android:id="@+id/bt_calculate"
+                android:text="@string/calculate_bmi"
+                />
+
+            <TextView
+                style="@style/ResultText"
+                android:id="@+id/tv_result"
+                android:text="@{body.bmi.toString()}"
+                />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1a9e48</color>
+    <color name="colorPrimaryDark">#127915</color>
+    <color name="colorAccent">#0fd499</color>
+    <color name="white">@android:color/white</color>
+    <color name="black">@android:color/black</color>
+    <color name="opacity_white">#7FFFFFFF</color>
+    <color name="divide_line">@color/opacity_white</color>
+    <color name="bg_progress_bar">#BFFFFFFF</color>
+    <color name="min_temperature">#BF9E9E9E</color>
+    <color name="btn">#20ca75</color>
+</resources>
