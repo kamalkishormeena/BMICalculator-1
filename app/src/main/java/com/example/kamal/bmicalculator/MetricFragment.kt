@@ -1,15 +1,21 @@
 package com.example.kamal.bmicalculator
 
 import android.databinding.DataBindingUtil
+import android.os.Build
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
+import android.support.v7.widget.Toolbar
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import android.widget.NumberPicker
+import android.widget.TextView
 import com.example.kamal.bmicalculator.databinding.FragmentMetricBinding
 import com.example.kamal.bmicalculator.model.BodyJava
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_metric.*
 import kotlinx.android.synthetic.main.fragment_metric.view.*
 
@@ -53,8 +59,25 @@ class MetricFragment : Fragment(), View.OnClickListener {
     private fun displayResult() {
         val rootView = view!!
 
-        val bmiText = Utils.getBmiText(context!!, body!!.bmi)
-        rootView.tv_result.text = bmiText
-    }
+        try {
+            val bmiRes = Utils.getBmiText2(context!!, body!!.bmi)
+            val bmiText = Utils.getBmiText(context!!, body!!.bmi)
 
+            res.setText("Your BMI")
+            res.setPadding(0, 0, 200, 220)
+            res.setTextSize(30F)
+            rootView.tv_result.text = bmiText
+            rootView.result.text = bmiRes
+        }
+        catch (e: NumberFormatException){
+                rootView.tv_result.setText("")
+
+                val mainActivity = activity
+                if (mainActivity is MainActivity) {
+                    mainActivity.setToastText(getString(R.string.toast_invalid_number))
+                    res.setText("Invalid Number\nPlease insert valid entries")
+                    res.setTextSize(30F)
+                }
+        }
+    }
 }

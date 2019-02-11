@@ -54,14 +54,21 @@ class ImperialFragment : Fragment(), View.OnClickListener {
             val weight = Utils.poundToKg(pounds)
             val bmiValue = Utils.getBmiValue(height, weight)
             val bmiText = Utils.getBmiText(context!!, bmiValue)
+            val bmiRes = Utils.getBmiText2(context!!, bmiValue)
 
+            res.setText("Your BMI")
+            res.setTextSize(30F)
+            res.setPadding(0,0,200,220)
             rootView.tv_result.text = bmiText
+            rootView.result.text=bmiRes
         } catch (e: NumberFormatException) {
             rootView.tv_result.text = ""
 
             val mainActivity = activity
             if (mainActivity is MainActivity) {
                 mainActivity.setToastText(getString(R.string.toast_invalid_number))
+                res.setText("Invalid Number\nPlease insert valid entries")
+                res.setTextSize(30F)
             }
         }
     }

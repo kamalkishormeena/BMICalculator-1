@@ -24,7 +24,29 @@ object Utils {
             desc = context.getString(R.string.bmi_obesity)
         }
 
-        return string + ", " + desc;
+        return string;
+    }
+
+    fun getBmiText2(context: Context, x: Double?): String {
+
+        if (x == null) {
+            return ""
+        }
+
+        val string = context.getString(R.string.your_bmi_is, x);
+        val desc : String
+
+        if (x < 18.5) {
+            desc = context.getString(R.string.bmi_underweight)
+        } else if (x < 24.9) {
+            desc = context.getString(R.string.bmi_normal_weight)
+        } else if (x < 29.9) {
+            desc = context.getString(R.string.bmi_overweight)
+        } else {
+            desc = context.getString(R.string.bmi_obesity)
+        }
+
+        return desc;
     }
 
     fun getBmiValue(heightInMeter: Double, weightInKg: Double): Double {

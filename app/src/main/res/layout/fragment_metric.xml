@@ -4,16 +4,44 @@
         <variable name="body" type="com.example.kamal.bmicalculator.model.BodyJava" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
+        android:id="@+id/layout1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="?attr/bmiBg"
+        >
         <LinearLayout
             style="@style/TextLayout"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/Res"
+            android:layout_alignParentTop="true"
+            >
+            <TextView
+                style="@style/ResultText"
+                android:id="@+id/res"
+                android:gravity="center"
+                android:visibility="visible"
+                android:text="Calculate\nYour BMI"
+                android:layout_marginTop="0dp"
+                android:textSize="50dp"/>
+            <TextView
+                style="@style/ResultText"
+                android:id="@+id/tv_result"
+                android:text="@{body.bmi.toString()}"
+                android:layout_marginTop="-180dp"
+                android:textSize="120dp"/>
+            <TextView
+                style="@style/ResultText"
+                android:id="@+id/result"
+                android:text="@{body.bmi.toString()}"
+                android:layout_marginTop="-60dp"
+                android:textSize="50dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/TextLayout"
+            android:layout_alignParentBottom="true"
             >
             <TextView
                 style="@style/LabelText"
@@ -42,18 +70,15 @@
 
             <Button
                 style="@style/Button"
-                android:background="@color/btn"
+                android:layout_gravity="center"
+                android:background="?attr/btnbg"
                 android:id="@+id/bt_calculate"
+                android:layout_marginBottom="5dp"
                 android:text="@string/calculate_bmi"
                 />
 
-            <TextView
-                style="@style/ResultText"
-                android:id="@+id/tv_result"
-                android:text="@{body.bmi.toString()}"
-                />
         </LinearLayout>
 
-    </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
 
 </layout>
