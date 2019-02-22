@@ -1,6 +1,8 @@
 package com.example.kamal.bmicalculator
 
 import android.content.Intent
+import android.graphics.Typeface
+import android.graphics.Typeface.createFromAsset
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 
@@ -13,6 +15,7 @@ import android.support.v4.content.ContextCompat
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_main.*

@@ -19,4 +19,42 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">0dp</dimen>
 
+
+    <!--New Metric/Imperial Dimensions -->
+
+    <dimen name="MT2_right">200dp</dimen>
+    <dimen name="MT2_bottom">220dp</dimen>
+
+    <dimen name="mainText">50dp</dimen>
+    <dimen name="mainText2">30dp</dimen>
+    <dimen name="marginTop_main">0dp</dimen>
+
+    <dimen name="resultText">120dp</dimen>
+    <dimen name="marginTop_RT">-130dp</dimen>
+
+    <dimen name="resultText2">50dp</dimen>
+    <dimen name="marginTop_RT2">-60dp</dimen>
+
+    <dimen name="bmi_info_dp">14dp</dimen>
+    <dimen name="bmi_warning_dp">12dp</dimen>
+    <dimen name="card_height">280dp</dimen>
+    <dimen name="cardLayout_height">355dp</dimen>
+
+    <!--imperial Dimensions-->
+
+    <dimen name="mainText_imp">50dp</dimen>
+    <dimen name="mainText2_imp">30dp</dimen>
+    <dimen name="marginTop_main2">0dp</dimen>
+
+    <dimen name="resultText_imp">120dp</dimen>
+    <dimen name="marginTop_RT_imp">-180dp</dimen>
+
+    <dimen name="resultText2_imp">50dp</dimen>
+    <dimen name="marginTop_RT2_imp">-60dp</dimen>
+
+    <dimen name="card_height2">280dp</dimen>
+    <dimen name="cardLayout_height2">360dp</dimen>
+
+
+
 </resources>

@@ -6,6 +6,7 @@ package com.example.kamal.bmicalculator
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.TypedValue
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
@@ -57,7 +58,7 @@ class ImperialFragment : Fragment(), View.OnClickListener {
             val bmiRes = Utils.getBmiText2(context!!, bmiValue)
 
             res.setText("Your BMI")
-            res.setTextSize(30F)
+            res.setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.mainText2_imp))
             res.setPadding(0,0,200,220)
             rootView.tv_result.text = bmiText
             rootView.result.text=bmiRes

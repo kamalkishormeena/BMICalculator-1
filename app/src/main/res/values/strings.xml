@@ -18,4 +18,6 @@
     <string name="toast_invalid_number">Invalid number!</string>
 
     <string name="your_bmi_is2">Your BMI is %.1f</string>
+    <string name="bmi_info">Body mass index, or BMI, is used to determine whether you are in a healthy weight range for your height.</string>
+    <string name="bmi_warning">This Calculator shouldn\'t be used for pregnant women or children</string>
 </resources>

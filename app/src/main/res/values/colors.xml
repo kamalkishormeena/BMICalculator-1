@@ -9,6 +9,7 @@
     <color name="divide_line">@color/opacity_white</color>
     <color name="bg_progress_bar">#BFFFFFFF</color>
     <color name="min_temperature">#BF9E9E9E</color>
+    <color name="min_black">#BF333333</color>
     <color name="btn">#000398</color>
 
     <color name="colorPrimary2">#E8A8F7</color>

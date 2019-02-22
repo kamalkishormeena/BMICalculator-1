@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable name="body" type="com.example.kamal.bmicalculator.model.BodyJava" />
     </data>
@@ -10,73 +11,125 @@
         android:layout_height="match_parent"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:background="?attr/bmiBg"
+        android:background="?attr/colorPrimary"
         >
         <LinearLayout
             style="@style/TextLayout"
             android:id="@+id/Res"
             android:layout_alignParentTop="true"
             >
+
             <TextView
                 style="@style/ResultText"
                 android:id="@+id/res"
                 android:gravity="center"
                 android:visibility="visible"
                 android:text="Calculate\nYour BMI"
-                android:layout_marginTop="0dp"
-                android:textSize="50dp"/>
+                android:fontFamily="@font/century_gothic"
+                android:layout_marginTop="@dimen/marginTop_main"
+                android:textSize="@dimen/mainText"/>
             <TextView
                 style="@style/ResultText"
                 android:id="@+id/tv_result"
                 android:text="@{body.bmi.toString()}"
-                android:layout_marginTop="-180dp"
-                android:textSize="120dp"/>
+                android:layout_marginTop="@dimen/marginTop_RT"
+                android:fontFamily="@font/gothicb"
+                android:textSize="@dimen/resultText"/>
             <TextView
                 style="@style/ResultText"
                 android:id="@+id/result"
                 android:text="@{body.bmi.toString()}"
-                android:layout_marginTop="-60dp"
-                android:textSize="50dp"/>
+                android:fontFamily="@font/century_gothic"
+                android:layout_marginTop="@dimen/marginTop_RT2"
+                android:textSize="@dimen/resultText2"/>
 
         </LinearLayout>
         <LinearLayout
             style="@style/TextLayout"
             android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/cardLayout_height"
             >
-            <TextView
-                style="@style/LabelText"
-                android:text="@string/label_height_metric"
-                android:labelFor="@+id/et_height"
-                />
-            <EditText
-                style="@style/EditText"
-                android:id="@+id/et_height"
-                android:inputType="numberDecimal"
-                android:text="@={body.heightText}"
-                />
+            <android.support.v7.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_height"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="?attr/cardbg"
+                >
+                <LinearLayout
+                    style="@style/TextLayout"
+                    android:layout_marginTop="20dp"
+                    >
+                    <TextView
+                        style="@style/LabelText"
+                        android:text="@string/label_height_metric"
+                        android:labelFor="@+id/et_height"
+                        android:fontFamily="@font/gothicb"
 
-            <TextView
-                style="@style/LabelText"
-                android:text="@string/label_weight_metric"
-                android:labelFor="@+id/et_weight"
-                />
-            <EditText
-                style="@style/EditText"
-                android:id="@+id/et_weight"
-                android:inputType="numberDecimal"
-                android:text="@={body.weightText}"
-                android:imeOptions="actionDone"
-                />
+                        />
+                    <EditText
+                        style="@style/EditText"
+                        android:id="@+id/et_height"
+                        android:inputType="numberDecimal"
+                        android:text="@={body.heightText}"
+                        />
 
-            <Button
-                style="@style/Button"
-                android:layout_gravity="center"
-                android:background="?attr/btnbg"
-                android:id="@+id/bt_calculate"
-                android:layout_marginBottom="5dp"
-                android:text="@string/calculate_bmi"
-                />
+                    <TextView
+                        style="@style/LabelText"
+                        android:text="@string/label_weight_metric"
+                        android:labelFor="@+id/et_weight"
+                        android:fontFamily="@font/gothicb"
+                        />
+                    <EditText
+                        style="@style/EditText"
+                        android:id="@+id/et_weight"
+                        android:inputType="numberDecimal"
+                        android:text="@={body.weightText}"
+                        android:imeOptions="actionDone"
+                        />
 
+                    <Button
+                        style="@style/Button"
+                        android:layout_gravity="center"
+                        android:id="@+id/bt_calculate"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/calculate_bmi"
+                        android:fontFamily="@font/century_gothic"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/l1"
+                android:background="?attr/colorPrimary"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="italic"
+                    android:textSize="@dimen/bmi_warning_dp"
+                    android:fontFamily="@font/gothicb"
+                    android:text="@string/bmi_warning"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="?attr/colorPrimary">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/bmi_info_dp"
+                    android:fontFamily="@font/century_gothic"
+                    android:text="@string/bmi_info"/>
+            </LinearLayout>
         </LinearLayout>
 
     </RelativeLayout>

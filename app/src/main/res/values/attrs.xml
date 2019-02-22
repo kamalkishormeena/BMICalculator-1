@@ -2,7 +2,12 @@
 <resources>
     <attr name="bmiBg" format="color"/>
     <attr name="btnbg" format="color"/>
+    <attr name="btntxt" format="color"/>
     <attr name="txtcolor" format="color"/>
     <attr name="editbg" format="color"/>
+    <attr name="cardbg" format="color"/>
+    <declare-styleable name="FontText">
+        <attr name="typefaceAsset" format="string"/>
+    </declare-styleable>
 
 </resources>

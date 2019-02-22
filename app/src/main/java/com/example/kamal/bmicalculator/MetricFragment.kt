@@ -1,5 +1,6 @@
 package com.example.kamal.bmicalculator
 
+import android.content.Context
 import android.databinding.DataBindingUtil
 import android.os.Build
 import android.os.Bundle
@@ -10,6 +11,8 @@ import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.view.inputmethod.EditorInfo
 import android.widget.NumberPicker
 import android.widget.TextView
@@ -18,6 +21,9 @@ import com.example.kamal.bmicalculator.model.BodyJava
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_metric.*
 import kotlinx.android.synthetic.main.fragment_metric.view.*
+import android.graphics.Typeface
+import android.util.TypedValue
+
 
 class MetricFragment : Fragment(), View.OnClickListener {
 
@@ -38,6 +44,7 @@ class MetricFragment : Fragment(), View.OnClickListener {
         binding!!.body = body
         val rootView = binding!!.root
 
+
         rootView.bt_calculate.setOnClickListener(this)
         rootView.et_weight.setOnEditorActionListener({ _, actionId, keyEvent ->
             if (keyEvent?.keyCode == KeyEvent.KEYCODE_ENTER || actionId == EditorInfo.IME_ACTION_DONE) {
@@ -48,6 +55,10 @@ class MetricFragment : Fragment(), View.OnClickListener {
         })
 
         return rootView
+    }
+
+    fun anim(view: View){
+        val animation=AnimationUtils.loadAnimation(context!!,R.anim.slide_down)
     }
 
     override fun onClick(clickedView: View?) {
@@ -65,7 +76,7 @@ class MetricFragment : Fragment(), View.OnClickListener {
 
             res.setText("Your BMI")
             res.setPadding(0, 0, 200, 220)
-            res.setTextSize(30F)
+            res.setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.mainText2))
             rootView.tv_result.text = bmiText
             rootView.result.text = bmiRes
         }
