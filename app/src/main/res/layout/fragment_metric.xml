@@ -45,6 +45,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/layout2"
             style="@style/TextLayout"
             android:layout_alignParentBottom="true"
             android:layout_height="@dimen/cardLayout_height"
@@ -55,6 +56,8 @@
                 android:layout_height="@dimen/card_height"
                 app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="?attr/cardbg"
+                app:cardElevation="4dp"
+                app:cardMaxElevation="6dp"
                 >
                 <LinearLayout
                     style="@style/TextLayout"
@@ -103,7 +106,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/l1"
-                android:background="?attr/colorPrimary"
                 >
                 <TextView
                     android:layout_width="match_parent"
@@ -119,8 +121,7 @@
                 android:id="@+id/l1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:background="?attr/colorPrimary">
+                android:layout_alignParentBottom="true">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

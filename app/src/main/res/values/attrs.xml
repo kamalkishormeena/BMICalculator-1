@@ -5,6 +5,10 @@
     <attr name="btntxt" format="color"/>
     <attr name="txtcolor" format="color"/>
     <attr name="editbg" format="color"/>
+    <attr name="colorPrimary" format="color"/>
+    <attr name="colorPrimaryDark" format="color"/>
+    <attr name="colorAccent" format="color"/>
+
     <attr name="cardbg" format="color"/>
     <declare-styleable name="FontText">
         <attr name="typefaceAsset" format="string"/>

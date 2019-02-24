@@ -1,5 +1,6 @@
 package com.example.kamal.bmicalculator
 
+import android.animation.ValueAnimator
 import android.content.Context
 import android.databinding.DataBindingUtil
 import android.os.Build
@@ -44,7 +45,6 @@ class MetricFragment : Fragment(), View.OnClickListener {
         binding!!.body = body
         val rootView = binding!!.root
 
-
         rootView.bt_calculate.setOnClickListener(this)
         rootView.et_weight.setOnEditorActionListener({ _, actionId, keyEvent ->
             if (keyEvent?.keyCode == KeyEvent.KEYCODE_ENTER || actionId == EditorInfo.IME_ACTION_DONE) {
@@ -79,6 +79,7 @@ class MetricFragment : Fragment(), View.OnClickListener {
             res.setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.mainText2))
             rootView.tv_result.text = bmiText
             rootView.result.text = bmiRes
+
         }
         catch (e: NumberFormatException){
                 rootView.tv_result.setText("")

@@ -19,4 +19,23 @@
     <color name="colorPrimary3">#111111</color>
     <color name="colorPrimaryDark3">#090909</color>
     <color name="colorAccent3">#252525</color>
+
+    <color name="Red">#E60000</color>
+    <color name="RedP">#D10000</color>
+
+    <color name="Green">#3DB900</color>
+    <color name="GreenP">#319B00</color>
+
+    <color name="defaultC">#000398</color>
+    <color name="defaultCp">#00038A</color>
+
+    <color name="pink">#DE14FF</color>
+    <color name="pinkp">#D015EE</color>
+
+    <color name="orange">#FF7700</color>
+    <color name="orangep">#F06E00</color>
+
+    <color name="lightBlue">#00A2CC</color>
+    <color name="lightBluep">#0088AA</color>
+
 </resources>
